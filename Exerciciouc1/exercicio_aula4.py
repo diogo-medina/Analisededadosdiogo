@@ -6,22 +6,22 @@
 # cômodo. Considere que a potência necessária é de 3 watts por metro quadrado e a cada 
 # 3m² existe um bocal para uma lâmpada.
 
-# potencia_lampada = 20
-# largura = 2
-# comprimento = 5
+potencia_lampada = 20
+largura = 2
+comprimento = 5
 
-# area = largura * comprimento
-# potencia_necessaria = area * 3
-# lampadas = potencia_necessaria / potencia_lampada
+area = largura * comprimento
+potencia_necessaria = area * 3
+lampadas = potencia_necessaria / potencia_lampada
 
-# if lampadas <= 1:
-#     print("Será necessária 1 lâmpada")
-# elif lampadas <= 2:
-#     print("Serão necessárias 2 lâmpadas")
-# elif lampadas <= 3:
-#     print("Serão necessárias 3 lâmpadas")
-# else:
-#     print("Serão necessárias mais de 3 lâmpadas")
+if lampadas <= 1:
+    print("Será necessária 1 lâmpada")
+elif lampadas <= 2:
+    print("Serão necessárias 2 lâmpadas")
+elif lampadas <= 3:
+    print("Serão necessárias 3 lâmpadas")
+else:
+    print("Serão necessárias mais de 3 lâmpadas")
 
             # EXERCICIO 2 >>>>>>>>>>>>>>
 
@@ -31,23 +31,23 @@
 # janelas). Cada caixa de azulejos possui 1,5 m² 
 
 
-# comprimento = float(input("Digite o comprimento da cozinha: "))
-# largura = float(input("Digite a largura da cozinha: "))
-# altura = float(input("Digite a altura da cozinha: "))
+comprimento = float(input("Digite o comprimento da cozinha: "))
+largura = float(input("Digite a largura da cozinha: "))
+altura = float(input("Digite a altura da cozinha: "))
 
-# area_paredes = 2 * (comprimento * altura) + 2 * (largura * altura)
-# caixas = area_paredes / 1.5
+area_paredes = 2 * (comprimento * altura) + 2 * (largura * altura)
+caixas = area_paredes / 1.5
 
-# if caixas <= 1:
-#     print("Será necessária 1 caixa de azulejo")
-# elif caixas <= 5:
-#     print("Serão necessárias", round(caixas), "caixas de azulejo")
-# elif caixas <= 10:
-#     print("Serão necessárias", round(caixas), "caixas de azulejo")
-# else:
-#     print("Serão necessárias", round(caixas), "caixas de azulejo")
+if caixas <= 1:
+    print("Será necessária 1 caixa de azulejo")
+elif caixas <= 5:
+    print("Serão necessárias", round(caixas), "caixas de azulejo")
+elif caixas <= 10:
+    print("Serão necessárias", round(caixas), "caixas de azulejo")
+else:
+    print("Serão necessárias", round(caixas), "caixas de azulejo")
 
-# print("Área total das paredes:", area_paredes, "m²") 
+print("Área total das paredes:", area_paredes, "m²") 
 
   # EXERCICIO 3  
 # Um motorista de táxi deseja calcular o rendimento de seu carro na praça. Sabendo-se que o 
@@ -56,6 +56,31 @@
 # combustível gasto e o valor total (R$) recebido dos passageiros. Calcular e escrever: a 
 # média do consumo em km/L e o lucro (líquido) do dia.
 
+valor_combustivel = 6.15
+
+try:
+    km_inicial = float(input("Digite a quilometragem inicial: "))
+    km_final = float(input("Digite a quilometragem final: "))
+    litros = float(input("Digite os litros de combustível gastos: "))
+    valor_recebido = float(input("Digite o valor recebido dos passageiros: "))
+
+    if km_final >= km_inicial and litros > 0:
+
+        distancia = km_final - km_inicial
+        consumo = distancia / litros
+        gasto = litros * valor_combustivel
+        lucro = valor_recebido - gasto
+
+        print("Distância percorrida:", distancia, "km")
+        print("Consumo médio:", round(consumo, 2), "km/L")
+        print("Lucro líquido do dia: R$", round(lucro, 2))
+
+    elif km_final < km_inicial or litros <0:
+        print("Valores informados inválidos.")
+
+except ValueError:
+    print("caractere digitado invalido")
+    
 
 
     
@@ -64,27 +89,27 @@
 # Escreva um programa que leia o código de origem de um produto e imprima na tela a região 
 # de sua procedência, conforme a tabela abaixo: 
 
-# nomes_regiao=int(input("digite um codigo de 1 a 11: "))
+nomes_regiao=int(input("digite um codigo de 1 a 11: "))
 
-# match nomes_regiao:
-#     case 1:
-#         print("Sul")
-#     case 2:
-#         print("Norte")
-#     case 3:
-#         print("Leste")
-#     case 4:
-#         print("Oeste")
-#     case 5 | 6:
-#         print("Nordeste")
-#     case 7|8|9:
-#         print("Sudeste")
-#     case 10:
-#         print("centro-oeste")
-#     case 11:
-#         print("Noroeste")
-#     case _:
-#         print("Importado")
+match nomes_regiao:
+    case 1:
+        print("Sul")
+    case 2:
+        print("Norte")
+    case 3:
+        print("Leste")
+    case 4:
+        print("Oeste")
+    case 5 | 6:
+        print("Nordeste")
+    case 7|8|9:
+        print("Sudeste")
+    case 10:
+        print("centro-oeste")
+    case 11:
+        print("Noroeste")
+    case _:
+        print("Importado")
 
    #Exercicio 5 >>>>>>>>>>>>
 
@@ -95,31 +120,31 @@
 # mensagens que indiquem se o estudante foi aprovado, reprovado ou se está em 
 # recuperação, de acordo com as informações abaixo: 
 
-# try:
+try:
 
-#     nota1 = float(input("Digite a nota da primeira avaliação: "))
-#     nota2 = float(input("Digite a nota da segunda avaliação: "))
-#     optativa = float(input("Digite a nota da prova optativa (-1 se não fez): "))
+    nota1 = float(input("Digite a nota da primeira avaliação: "))
+    nota2 = float(input("Digite a nota da segunda avaliação: "))
+    optativa = float(input("Digite a nota da prova optativa (-1 se não fez): "))
 
-#     if optativa != -1:
-#         if nota1 < nota2:
-#             nota1 = optativa
-#     else:
-#         nota2 = optativa
+    if optativa != -1:
+        if nota1 < nota2:
+            nota1 = optativa
+    else:
+        nota2 = optativa
 
 
-#     media = (nota1 + nota2) / 2
-#     print("Média do semestre:", round(media, 2))
+    media = (nota1 + nota2) / 2
+    print("Média do semestre:", round(media, 2))
 
-#     if media >= 6:
-#         print("Aluno aprovado")
-#     elif media >= 3:
-#         print("Aluno em recuperação")
-#     else:
-#         print("Aluno reprovado")
+    if media >= 6:
+        print("Aluno aprovado")
+    elif media >= 3:
+        print("Aluno em recuperação")
+    else:
+        print("Aluno reprovado")
 
-# except ValueError:
-#     print("Erro de digitação. Digite apenas números.")
+except ValueError:
+    print("Erro de digitação. Digite apenas números.")
 
 
 
@@ -127,12 +152,12 @@
 # Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o 
 # valor zero como positivo.
 
-# valor_numero=int(input(" Digite o valor:"))
+valor_numero=int(input(" Digite o valor:"))
 
-# if  valor_numero >= 0:
-#     print("Positivo")
-# else:
-#     print("valor negativo")
+if  valor_numero >= 0:
+    print("Positivo")
+else:
+    print("valor negativo")
 
                                 #   ou
 
