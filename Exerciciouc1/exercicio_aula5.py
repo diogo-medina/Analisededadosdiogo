@@ -41,25 +41,26 @@
 # a coleta dos demais dados (telefone, email etc) para esse candidato.
 # ● Se for maior de 18, o programa prossegue com o input() para os demais dados.
 
-# ano_atual = 2026
-# for i in range(1, 13):
-#     try:
-#         print("\nCandidato", i)
+ano_atual = 2026
+for i in range(1, 13):
+    try:
+        print("\nCandidato", i)
 
-#         ano_nascimento = int(input("Digite o ano de nascimento: "))
-#         idade = ano_atual - ano_nascimento
+        ano_nascimento = int(input("Digite o ano de nascimento: "))
+        idade = ano_atual - ano_nascimento
 
-#         if idade < 18:
-#             print("Candidato menor de 18 anos. Não pode participar.")
+        if idade < 18:
+            print("Candidato menor de 18 anos. Não pode participar.")
+            continue
            
-#         telefone = input("Digite o telefone: ")
-#         email = input("Digite o email: ")
+        telefone = input("Digite o telefone: ")
+        email = input("Digite o email: ")
 
-#         print("Cadastro realizado com sucesso!")
-#         print("Idade:", idade)
+        print("Cadastro realizado com sucesso!")
+        print("Idade:", idade)
 
-#     except ValueError:
-#         print("Erro de digitação. Digite valores válidos.")
+    except ValueError:
+        print("Erro de digitação. Digite valores válidos.")
 
 #    EXERCICIO 3>>>>>>>>>>>>>>>>>>
 
