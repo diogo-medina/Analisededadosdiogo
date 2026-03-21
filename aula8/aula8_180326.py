@@ -56,20 +56,54 @@
 # intersecao=impares.intersection(impares_02)
 # print(intersecao)
 
-filme={
-    'nome':'V for Vendetta',
-    'ano': 2005,
-    'genero':'Ação', #Thriller/Drama
-    'faixa_etaria':16
-}
-print(filme)
-print(type(filme))
+# filme={
+#     'nome':'V for Vendetta',
+#     'ano': 2005,
+#     'genero':'Ação', #Thriller/Drama
+#     'faixa_etaria':16
+# }
+# print(filme)
+# print(type(filme))
 
-print(filme.keys())
-print(filme.values())
-print(len(filme))
+# print(filme.keys())
+# print(filme.values())
+# print(len(filme))
 
-filme['duracao']='130min'
-filme['genero']='Thriller/Drama'
-filme['genero']=None
-print(filme)
+# filme['duracao']='130min'
+# filme['genero']='Thriller/Drama'
+# filme['genero']=None
+
+
+
+'''Vamos desenvolver um programa que leia 5 nomes de filmes e armazene nas quatro 
+formas, mostrando as diferenças na prática. '''
+#Coleta dos Dados: 
+dados_entrada = [] 
+print("Digite 5 nomes de filmes:") 
+for i in range(5): 
+    nome = input(f"Filme {i+1}: ") 
+    dados_entrada.append(nome) # Usando LISTA para coletar os dados 
+     
+print("-" * 30) 
+ 
+#Armazenamento e Exibição: 
+# 1. LISTA: 
+lista_filmes = dados_entrada
+print(lista_filmes) 
+ 
+# 2. TUPLA: 
+tupla_filmes = tuple(dados_entrada) 
+print(tupla_filmes)
+# 3. SET:  
+set_filmes = set(dados_entrada) 
+print(set_filmes)
+# 4. DICIONÁRIO: Usando o índice como chave (ex: 1: 'Filme A') 
+dicionario_filmes = {} 
+for i in range(len(dados_entrada)): # Repetição pelo tamanho da lista 
+    # Usando o índice (i+1) como CHAVE e o nome como VALOR 
+    dicionario_filmes[i + 1] = dados_entrada[i]  
+ 
+print(f"LISTA (Flexível): {lista_filmes}") 
+print(f"TUPLA (Fixa): {tupla_filmes}") 
+print(f"SET (Apenas Únicos): {set_filmes}") 
+print(f"DICIONÁRIO (Chave: Valor): {dicionario_filmes}")
