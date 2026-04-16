@@ -92,3 +92,4 @@ import seaborn as sns  # Importando a biblioteca Seaborn
 sns.histplot(precos_array, kde=True) # kde=True adiciona a curva de densidade, traduzindo seria "Kernel Density Estimate"
 plt.title('Distribuição dos Preços dos Produtos')
 plt.show()  
+
