@@ -1,0 +1,8 @@
+id_aluno,nome,data_nascimento,mensalidade,curso
+101,Jo\xc3\xa3o Silva,15/05/2000,"1.250,50",Sistemas de Informa\xc3\xa7\xc3\xa3o
+102,Maria Oliveira,2001-10-25,"1.100,00",T\xc3\xa9cnico em Energias Renov\xc3\xa1veis
+103,  Carlos Souza  ,02/12/1998,950.00,Big Data Science
+104,Ana Costa,30/02/1995,"R$ 1.300,00",Engenharia de Software
+105,Jo\xc3\xa3o Silva,15/05/2000,"1.250,50",Sistemas de Informa\xc3\xa7\xc3\xa3o
+106,Lucas Ferr\xc3\xa3o,,850,00,An\xc3\xa1lise de Dados
+2000,Erro de Teste,01/01/1900,999999.99,Curso Fantasma
